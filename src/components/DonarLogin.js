@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import {
   MDBContainer,
   MDBCol,
@@ -8,36 +9,40 @@ import {
   MDBInput,
   MDBCheckbox,
 } from 'mdb-react-ui-kit';
-import { Link, useNavigate } from 'react-router-dom';
 
-const Signin1 = () => {
-  const [email, setEmail] = React.useState();
-  const [password, setPassword] = React.useState();
-  const navigate = useNavigate();
-  const handleLogin = async () => {
+
+
+function DonarLogin() {
+  const [email,setEmail]=React.useState();
+  const [password,setPassword]=React.useState();
+  const navigate=useNavigate();
+  const handleLogin = async() => {
     window.alert(`Thank you for Login`);
-    console.warn(email, password);
-    let result = await fetch('http://localhost:4000/Signin1', {
+    console.warn(email,password)
+    let result = await fetch('http://localhost:4000/DonarLogin', {
       method: 'post',
-      body: JSON.stringify({ email, password }),
-      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({email,password }),
+      headers: {'Content-Type': 'application/json'}
     });
     result = await result.json();
 
-    if (result.firstName) {
-      localStorage.setItem('items', JSON.stringify(result));
+    if(result.firstName)
+    {
+      localStorage.setItem("items",JSON.stringify(result));
       console.warn(result);
       navigate('/Abouts');
-    } else {
-      alert('error');
     }
-  };
+    else
+    {
+      alert("error");
+    }
+  }
   return (
     <MDBContainer fluid className='p-3 my-5 h-custom'>
       <MDBRow>
         <MDBCol col='10' md='6'>
           <img
-            src='https://unos.org/wp-content/uploads/header-transplant-510x288@2x.png'
+            src='https://www.mainlinehealth.org/-/media/images/blog/2022/05/organ-donation/organ-donor-featured.jpg'
             class='img-fluid'
             alt='Sample image'
           />
@@ -50,7 +55,7 @@ const Signin1 = () => {
             id='formControlLg'
             type='email'
             size='lg'
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e)=>setEmail(e.target.value)}
           />
           <MDBInput
             wrapperClass='mb-4'
@@ -58,7 +63,7 @@ const Signin1 = () => {
             id='formControlLg'
             type='password'
             size='lg'
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e)=>setPassword(e.target.value)}
           />
 
           <div className='d-flex justify-content-between mb-4'>
@@ -72,12 +77,12 @@ const Signin1 = () => {
           </div>
 
           <div className='text-center text-md-start mt-4 pt-2'>
-            <MDBBtn className='mb-0 px-5' size='lg' onClick={handleLogin}>
+            <MDBBtn className='mb-0 px-5' size='lg'onClick={handleLogin}>
               Login
             </MDBBtn>
             <p className='small fw-bold mt-2 pt-1 mb-2'>
               Don't have an account?{' '}
-              <Link to='/SignUp1' className='link-danger'>
+              <Link to='/Donar' className='link-danger'>
                 Register
               </Link>
             </p>
@@ -86,6 +91,6 @@ const Signin1 = () => {
       </MDBRow>
     </MDBContainer>
   );
-};
+}
 
-export default Signin1;
+export default DonarLogin;

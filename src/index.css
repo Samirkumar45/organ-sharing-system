@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
 }
@@ -13,4 +14,153 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+nav {
+
+  background-color: black;
+  padding: 16px 32px;
+}
+
+nav a {
+  color: white;
+  margin-right: 16px;
+  text-decoration: none;
+}
+
+nav a.active {
+  text-decoration: none;
+  font-weight: bold;
+
+}
+
+.nav-right {
+  text-align: right;
+}
+
+/* .searchbox {
+  width: 400px;
+  margin: 20px;
+  height: 40px;
+  border: 1px solid black;
+  padding-left: 200px;
+} */
+
+/* th tr {
+  display: inline-block;
+  width: 150px;
+  border: 1px solid balck;
+  padding: 5px;
+} */
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+th {
+  border: 2px solid black;
+}
+
+td {
+  border: 2px solid;
+}
+
+.list-ul {
+  margin: 0;
+}
+
+#header {
+  width: 100%;
+  weight: 80vh;
+  margin-top: 70px;
+
+}
+
+#header h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  color: black;
+
+}
+
+#header .brand-name {
+  color: blue;
+}
+
+#header h2 {
+
+  font-size: 24px;
+
+  color: black;
+
+}
+
+#header .btn-get-started {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: aliceblue;
+  border: 2px solid rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+#header .btn-get-started:hover {
+  background: rgb(243, 243, 247);
+  color: rgb(245, 245, 248);
+}
+
+.header-img {
+  text-align: right;
+}
+
+#header .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  background-color: aquamarine;
+  color: antiquewhite;
+}
+
+.btngo{
+  color: aliceblue;
+}
+
+.logo {
+  float: left;
+  margin-top: 12px;
+  margin-left: 5px;
+  color: aliceblue;
 }

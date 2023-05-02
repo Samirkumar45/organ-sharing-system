@@ -27,12 +27,13 @@ function Abouts() {
       <section id='about' className='about'>
         <div className='container aos-init aos-animate' data-aos='fade-up'>
           <div className='section-title'>
-            <h2>About Us</h2>
+            <h2>About</h2>
             <p>
-              Magnam dolores commodi suscipit. Necessitatibus eius consequatur
-              ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
-              quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-              Quia fugiat sit in iste officiis commodi quidem hic quas.
+              Organ donation is the selfless act of donating one's organs or
+              tissues to save or improve the lives of others who are in need. It
+              is a vital and life-saving practice that can help to enhance the
+              quality of life for those who are suffering from debilitating
+              illnesses or injuries.
             </p>
           </div>
 
@@ -41,19 +42,24 @@ function Abouts() {
               className='col-lg-6 aos-init aos-animate'
               data-aos='fade-right'
             >
-              <img src='assets/img/about.jpg' className='img-fluid' alt='' />
+              <img
+                src='  https://www.shutterstock.com/image-vector/organ-donation-web-banner-flyer-260nw-1569642214.jpg'
+                className='img-fluid'
+                alt=''
+              />
             </div>
             <div
               className='col-lg-6 pt-4 pt-lg-0 content aos-init aos-animate'
               data-aos='fade-left'
             >
-              <h3>
-                Voluptatem dignissimos provident quasi corporis voluptates sit
-                assumenda.
-              </h3>
+              <h3>Organ Donation process</h3>
+              <h3>Step 1</h3>
               <p className='fst-italic'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Registration: Individuals who wish to become organ donors can
+                register their decision online, through their driver's license
+                or state ID, or by filling out a donor card. Registering as an
+                organ donor is an important step in ensuring that your wishes
+                are known and honored in the event of your death.
               </p>
               <ul>
                 <li>

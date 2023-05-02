@@ -1,95 +1,40 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Navbar() {
+  const auth = localStorage.getItem('items');
+  const navigate = useNavigate();
+  const logout = () => {
+    localStorage.clear();
+    navigate('/');
+  };
   return (
     <div>
-      <nav className='navbar navbar-expand-lg bg-body-tertiary'>
-        <div className='container-fluid'>
-          <a className='navbar-brand' href='#'>
-            Navbar
-          </a>
-          <button
-            className='navbar-toggler'
-            type='button'
-            data-bs-toggle='collapse'
-            data-bs-target='#navbarSupportedContent'
-            aria-controls='navbarSupportedContent'
-            aria-expanded='false'
-            aria-label='Toggle navigation'
-          >
-            <span className='navbar-toggler-icon'></span>
-          </button>
-          <div className='collapse navbar-collapse' id='navbarSupportedContent'>
-            <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
-              <li className='nav-item'>
-                <Link
-                  className='nav-link active'
-                  aria-current='page'
-                  to='/Header1'
-                  >
-                  Home
-                </Link>
-              </li>
-              <li className='nav-item'>
-                <Link
-                  className='nav-link active'
-                  aria-current='page'
-                  to='/Abouts'
-                >
-                  About us
-                </Link>
-              </li>
-              <li className='nav-item'>
-                <Link
-                  className='nav-link active'
-                  aria-current='page'
-                  to='/Signin1'
-                >
-                  Sign in
-                </Link>
-              </li>
-              <li className='nav-item'>
-                <Link
-                  className='nav-link active'
-                  aria-current='page'
-                  to='/SignUp1'
-                >
-                  Sign Up
-                </Link>
-              </li>
-              {/* <li className="nav-item">
-          <a className="nav-link" href="#">Link</a>
-        </li>
-        <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul className="dropdown-menu">
-            <li><a className="dropdown-item" href="#">Action</a></li>
-            <li><a className="dropdown-item" href="#">Another action</a></li>
-            <li><hr className="dropdown-divider"/></li>
-            <li><a className="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link disabled">Disabled</a>
-        </li> */}
-            </ul>
-            <form className='d-flex' role='search'>
-              <input
-                className='form-control me-2'
-                type='search'
-                placeholder='Search'
-                aria-label='Search'
-              />
-              <button className='btn btn-outline-success' type='submit'>
-                Search
-              </button>
-            </form>
-          </div>
-        </div>
-      </nav>
+      {/* <img alt="logo"
+          className="logo"
+          src="./Logo.jpeg"></img> */}
+          <h3 className='logo'>Organ Donation</h3>
+      {auth ? (
+        <nav>
+          {/* <Navbar.Brand href='#'>Organ Donation</Navbar.Brand> */}
+          
+          {/* <NavLink to='/Header1'>Home</NavLink> */}
+          <NavLink to='/Abouts'>About us</NavLink>
+          <NavLink to='/list'>Hospitals</NavLink>
+          <NavLink to='/list2'>Donars</NavLink>
+          <NavLink to='/' onClick={logout}>
+            Welcome,{JSON.parse(auth).firstName} Logout{' '}
+          </NavLink>
+        </nav>
+      ) : (
+        <nav className='nav-right'>
+          <NavLink to='/Signin1'>Login</NavLink>
+          <NavLink to='/DonarLogin'>DonarLogin</NavLink>
+          <NavLink to='/HospitalLogin'>HospitalLogin</NavLink>
+        </nav>
+      )}
     </div>
   );
 }
