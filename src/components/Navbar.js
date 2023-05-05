@@ -15,15 +15,16 @@ function Navbar() {
       {/* <img alt="logo"
           className="logo"
           src="./Logo.jpeg"></img> */}
-          <h3 className='logo'>Organ Donation</h3>
+      <h3 className='logo'>Organ Donation</h3>
       {auth ? (
         <nav>
           {/* <Navbar.Brand href='#'>Organ Donation</Navbar.Brand> */}
-          
+
           {/* <NavLink to='/Header1'>Home</NavLink> */}
           <NavLink to='/Abouts'>About us</NavLink>
           <NavLink to='/list'>Hospitals</NavLink>
-          <NavLink to='/list2'>Donars</NavLink>
+          <NavLink to='/Contact'>Contact</NavLink>
+          {/* <NavLink to='/list'>Donations</NavLink> */}
           <NavLink to='/' onClick={logout}>
             Welcome,{JSON.parse(auth).firstName} Logout{' '}
           </NavLink>

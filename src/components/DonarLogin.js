@@ -73,7 +73,6 @@ function DonarLogin() {
               id='flexCheckDefault'
               label='Remember me'
             />
-            <a href='!#'>Forgot password?</a>
           </div>
 
           <div className='text-center text-md-start mt-4 pt-2'>

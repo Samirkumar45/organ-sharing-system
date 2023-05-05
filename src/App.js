@@ -17,6 +17,9 @@ import DonarLogin from './components/DonarLogin';
 import PrivateComp from './components/privatecomp';
 import ListData from './components/ListData';
 import ListData2 from './components/ListData2';
+import Contact from './components/contact';
+// import contact from './components/contact';
+// import Contact from './components/contact';
 
 function App() {
   return (
@@ -30,7 +33,8 @@ function App() {
           <Route element={<PrivateComp />}>
             <Route path='Abouts' element={<Abouts />} />
             <Route path='list' element={<ListData />} />
-            <Route path='list2' element={<ListData2/>}/>
+            <Route path='list2' element={<ListData2 />} />
+            <Route path='contact' element={<Contact/>} />
           </Route>
 
           <Route path='/' element={<Header1 />} />

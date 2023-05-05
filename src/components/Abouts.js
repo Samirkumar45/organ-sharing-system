@@ -55,34 +55,40 @@ function Abouts() {
               <h3>Organ Donation process</h3>
               <h3>Step 1</h3>
               <p className='fst-italic'>
-                Registration: Individuals who wish to become organ donors can
-                register their decision online, through their driver's license
-                or state ID, or by filling out a donor card. Registering as an
-                organ donor is an important step in ensuring that your wishes
-                are known and honored in the event of your death.
+                <strong>Registration:</strong> Individuals who wish to become
+                organ donors can register their decision online, through their
+                driver's license or state ID, or by filling out a donor card.
+                Registering as an organ donor is an important step in ensuring
+                that your wishes are known and honored in the event of your
+                death.
               </p>
-              <ul>
-                <li>
-                  <i className='bi bi-check-circle'></i> Ullamco laboris nisi ut
-                  aliquip ex ea commodo consequat.
-                </li>
-                <li>
-                  <i className='bi bi-check-circle'></i> Duis aute irure dolor
-                  in reprehenderit in voluptate velit.
-                </li>
-                <li>
-                  <i className='bi bi-check-circle'></i> Ullamco laboris nisi ut
-                  aliquip ex ea commodo consequat. Duis aute irure dolor in
-                  reprehenderit in voluptate trideta storacalaperda mastiro
-                  dolore eu fugiat nulla pariatur.
-                </li>
-              </ul>
+              <h3>Step 2</h3>
+              <p className='fst-italic'>
+                <strong>Appointment:</strong> The customer contacts the service
+                provider to request an appointment, either via phone, email, or
+                an online booking system.
+              </p>
+            </div>
+            <div className='section-title'>
+              <h3>Step 3</h3>
               <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                aute irure dolor in reprehenderit in voluptate velit esse cillum
-                dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum
+                <strong>Donate Organ:</strong> Organ donation is a life-saving
+                process that can save and improve the lives of many people. It
+                is important for individuals to register as organ donors and
+                discuss their wishes with their family to help increase the
+                number of organs available for transplantation.{' '}
+              </p>
+            </div>
+            <div className='section-title'>
+              <h3>Step 4</h3>
+              <p>
+                <strong>Save Life</strong> Saving a life can involve a wide
+                range of actions, from providing CPR to administering emergency
+                medication to providing emotional support. It is important to
+                have basic knowledge of first aid and emergency response
+                procedures, and to call for professional help in serious
+                situations. Taking action to save a life can make a significant
+                difference in the outcome for the individual in need.
               </p>
             </div>
           </div>

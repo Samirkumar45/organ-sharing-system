@@ -14,7 +14,7 @@ const ListData = () => {
   const searchHandle = async (event) => {
     let key = event.target.value;
     if (key) {
-      let res = await fetch('http://localhost:4000/search/' + key);
+      let res = await fetch('http://127.0.0.1:4000/search/' + key);
       res = await res.json();
       if (res) {
         setData(res);
@@ -54,6 +54,7 @@ const ListData = () => {
                 <td>{val.website}</td>
                 <td>{val.city}</td>
                 <td>{val.address}</td>
+                {/* <td><button>Request</button></td> */}
               </tr>
             ))
           ) : (
