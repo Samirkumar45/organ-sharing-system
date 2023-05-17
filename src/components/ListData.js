@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Table from 'react-bootstrap/Table';
 
 const ListData = () => {
   const [data, setData] = useState([]);
@@ -36,7 +37,7 @@ const ListData = () => {
         <br />
         <br />
         <br />
-        <table>
+        {/* <table>
           <tr>
             <th>No.</th>
             <th>Name</th>
@@ -55,12 +56,40 @@ const ListData = () => {
                 <td>{val.city}</td>
                 <td>{val.address}</td>
                 {/* <td><button>Request</button></td> */}
-              </tr>
-            ))
-          ) : (
-            <h1>Data not Found</h1>
-          )}
-        </table>
+        {/* </tr> */}
+        {/* )) */}
+        {/* ) : ( */}
+        {/* <h1>Data not Found</h1> */}
+        {/* )} */}
+        {/* </table> */}
+        <Table striped bordered hover>
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Name</th>
+              <th>ContactNumber</th>
+              <th>website</th>
+              <th>city</th>
+              <th>address</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.length > 0 ? (
+              data.map((val, id) => (
+                <tr key={val._id}>
+                  <td>{id + 1}</td>
+                  <td>{val.Name}</td>
+                  <td>{val.ContactNumber}</td>
+                  <td>{val.website}</td>
+                  <td>{val.city}</td>
+                  <td>{val.address}</td>
+                </tr>
+              ))
+            ) : (
+              <h1>Data not Found</h1>
+            )}  
+          </tbody>
+        </Table>
       </center>
     </div>
   );
