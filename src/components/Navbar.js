@@ -23,6 +23,7 @@ function Navbar() {
           {/* <NavLink to='/Header1'>Home</NavLink> */}
           <NavLink to='/Abouts'>About us</NavLink>
           <NavLink to='/list'>Hospitals</NavLink>
+
           <NavLink to='/Contact'>Contact</NavLink>
           {/* <NavLink to='/list'>Donations</NavLink> */}
           <NavLink to='/' onClick={logout}>

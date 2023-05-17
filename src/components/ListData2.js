@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Table } from 'react-bootstrap';
 
 const ListData2 = () => {
   const [data, setData] = useState([]);
@@ -27,16 +28,16 @@ const ListData2 = () => {
     <div>
       <center>
         <br />
-        <input
+        {/* <input
           type='text'
           placeholder='Search Organ'
           className='searchbox'
           onChange={searchHandle}
-        ></input>
+        ></input> */}
         <br />
         <br />
         <br />
-        <table>
+        {/* <table>
           <tr>
             <th>No.</th>
             <th>Name</th>
@@ -57,7 +58,36 @@ const ListData2 = () => {
           ) : (
             <h1>Data not Found</h1>
           )}
-        </table>
+        </table> */}
+
+        <Table striped bordered hover>
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>FirstName</th>
+              <th>email</th>
+              <th>organ</th>
+              <th>city</th>
+              {/* <th>address</th> */}
+            </tr>
+          </thead>
+          <tbody>
+            {data.length > 0 ? (
+              data.map((val, id) => (
+                <tr key={val._id}>
+                  <td>{id + 1}</td>
+                  <td>{val.firstName}</td>
+                  <td>{val.email}</td>
+                  <td>{val.organ}</td>
+                  <td>{val.city}</td>
+                  {/* <td>{val.address}</td> */}
+                </tr>
+              ))
+            ) : (
+              <h1>Data not Found</h1>
+            )}
+          </tbody>
+        </Table>
       </center>
     </div>
   );
